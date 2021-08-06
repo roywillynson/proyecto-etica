@@ -23,6 +23,9 @@
             <a class="navbar-item" href="#important">
               <button class="button is-warning is-rounded">Importancia</button>
             </a>
+            <a class="navbar-item" href="#hola">
+              <button class="button is-warning is-rounded">Ventajas y Desventajas</button>
+            </a>
             <a class="navbar-item" href="#impacto">
               <button class="button is-warning is-rounded">Impacto de la IA</button>
             </a>

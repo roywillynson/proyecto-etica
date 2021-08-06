@@ -88,7 +88,7 @@
 
   </section>
 
-  <section class="section is-medium has-background-warning-light" id="important">
+  <section class="section is-medium has-background-warning-light" id="hola">
 
     <div class="mb-6">
       <h2 class="title is-size-2 has-text-black-ter pb-2 has-text-centered">
