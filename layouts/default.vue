@@ -1,54 +1,38 @@
 <template>
   <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
-        </a>
+    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+      <div class="container">
 
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
+        <div class="navbar-brand">
+          <nuxt-link class="navbar-item" to="/">
+            <p class="is-size-3 has-text-weight-bold" title="Inteligencia Artificial">IA</p>
+          </nuxt-link>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#what-is">
+              <button class="button is-warning is-rounded">AI</button>
+            </a>
+            <a class="navbar-item" href="#important">
+              <button class="button is-warning is-rounded">Importancia</button>
+            </a>
+            <a class="navbar-item" href="#impacto">
+              <button class="button is-warning is-rounded">Impacto de la IA</button>
+            </a>
+          </div>
+
         </div>
       </div>
     </nav>
 
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">
-          General
-        </p>
-        <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key"
-          >
-            <NuxtLink
-              :to="item.to"
-              exact-active-class="is-active"
-            >
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <Nuxt />
-      </div>
-    </section>
+    <Nuxt />
   </div>
 </template>
 
@@ -61,14 +45,38 @@ export default {
           title: 'Home',
           icon: 'home',
           to: { name: 'index' }
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
         }
       ]
     }
   }
 }
 </script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Rubik:wght@500;700&display=swap');
+
+$font-title: 'Rubik', sans-serif;
+$font-body: 'Roboto', sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+}
+
+.font-body {
+  font-family: $font-body;
+}
+
+.font-title {
+  font-family: $font-title;
+}
+
+</style>
